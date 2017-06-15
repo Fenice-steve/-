@@ -37,6 +37,7 @@ public class WeatherActivity extends AppCompatActivity {
     public DrawerLayout drawerLayout;
     public SwipeRefreshLayout swipeRefresh;
     private Button navButton;
+    private Button itemOptions;
     private String mWeatherId;
     private ScrollView weatherLayout;
     private TextView titleCity;
@@ -76,11 +77,20 @@ public class WeatherActivity extends AppCompatActivity {
         swipeRefresh = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh);
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         navButton = (Button) findViewById(R.id.nav_button);
+        itemOptions = (Button) findViewById(R.id.item_options);
 
         navButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 drawerLayout.openDrawer(GravityCompat.START);
+            }
+        });
+
+        itemOptions.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(WeatherActivity.this, ItemOptions.class);
+                startActivity(intent);
             }
         });
         swipeRefresh.setColorSchemeResources(R.color.colorPrimary);

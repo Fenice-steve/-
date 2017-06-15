@@ -8,7 +8,7 @@
         android:layout_width="25dp"
         android:layout_height="25dp"
         android:layout_marginLeft="15dp"
-        android:background="@drawable/ic_background"
+        android:background="@drawable/ic_background1"
         android:layout_alignBottom="@+id/title_city"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -31,5 +31,14 @@
         android:layout_marginRight="10dp"
         android:textColor="#fff"
         android:textSize="16sp"/>
+
+    <Button
+        android:id="@+id/item_options"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/ic_item3"
+        android:layout_alignBottom="@+id/title_city"
+        android:layout_toLeftOf="@+id/title_update_time"
+        android:layout_toStartOf="@+id/title_update_time"/>
 
 </RelativeLayout>
